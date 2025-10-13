@@ -1,0 +1,229 @@
+/* -----------------
+   Global Wrapper
+------------------ */
+.report-wrapper {
+  background: linear-gradient(160deg, #f9fafb, #f0fdf4);
+  font-family: "Inter", "Poppins", sans-serif;
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+
+/* -----------------
+   Header + Logo
+------------------ */
+.report-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.report-title img {
+  max-height: 80px;
+  object-fit: contain;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* -----------------
+   Earth Efficiency Score
+------------------ */
+.earth-circle {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: bold;
+  background: white;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  position: relative;
+}
+
+.earth-happy {
+  border: 10px solid #22c55e;
+  background: radial-gradient(circle at top, #d1fae5, #86efac);
+}
+
+.earth-sad {
+  border: 10px solid #ef4444;
+  background: radial-gradient(circle at top, #fee2e2, #fca5a5);
+}
+
+/* glowing ring animation */
+.earth-circle::after {
+  content: "";
+  position: absolute;
+  border: 4px solid rgba(34,197,94,0.3);
+  border-radius: 50%;
+  top: -15px; left: -15px; right: -15px; bottom: -15px;
+  animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.95); opacity: 0.7; }
+  50% { transform: scale(1.1); opacity: 0.2; }
+  100% { transform: scale(0.95); opacity: 0.7; }
+}
+
+/* -----------------
+   Metrics
+------------------ */
+.metric-card {
+  border-radius: 14px;
+  background: white;
+  padding: 18px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.05);
+  transition: transform 0.25s ease;
+}
+
+.metric-card:hover {
+  transform: translateY(-4px);
+}
+
+.metric-card h5 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #065f46;
+}
+
+.metric-card p {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 0;
+  color: #111827;
+}
+
+/* -----------------
+   Simulation + Equivalence
+------------------ */
+.simulate-card,
+.equivalence-card,
+.suggestion-card,
+.code-card,
+.explanation-card,
+.summary-card {
+  border-radius: 14px;
+  background: white;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.05);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.simulate-card h5,
+.equivalence-card h5,
+.suggestion-card h5,
+.explanation-card h5,
+.summary-card h5 {
+  font-weight: 700;
+  color: #065f46;
+}
+
+.form-range {
+  accent-color: #22c55e;
+}
+
+/* -----------------
+   Suggestions
+------------------ */
+.suggestion-card p {
+  font-family: "Fira Code", monospace;
+  color: #374151;
+  font-size: 0.95rem;
+}
+
+/* -----------------
+   Code Examples
+------------------ */
+.code-card pre {
+  background: #0f172a;
+  color: #e0f2fe;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  overflow-x: auto;
+}
+
+/* -----------------
+   Detailed Explanation
+------------------ */
+.explanation-card ul {
+  margin-left: 18px;
+  color: #374151;
+}
+
+.explanation-card li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+/* -----------------
+   Summary
+------------------ */
+.summary-card p {
+  color: #374151;
+  line-height: 1.6;
+}
+
+/* -----------------
+   Badges
+------------------ */
+.report-badge {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #16a34a;
+  padding: 4px 10px;
+  border-radius: 8px;
+  background: #dcfce7;
+  display: inline-block;
+}
+
+
+.efficiency-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #16a34a, #22c55e);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 12px 24px;
+  border-radius: 50px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  animation: popIn 0.6s ease;
+}
+
+/* Unique background colors for metrics */
+.co2-card {
+  background: linear-gradient(135deg, #fee2e2, #fecaca);
+  color: #b91c1c;
+}
+
+.energy-card {
+  background: linear-gradient(135deg, #e0f2fe, #bae6fd);
+  color: #1e3a8a;
+}
+
+.water-card {
+  background: linear-gradient(135deg, #d1fae5, #a7f3d0);
+  color: #065f46;
+}
+
+.trees-card {
+  background: linear-gradient(135deg, #fef9c3, #fde68a);
+  color: #92400e;
+}
+.device-card {
+  border-left: 6px solid #16a34a;
+  background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+  transition: transform 0.2s ease;
+}
+.device-card:hover {
+  transform: translateY(-4px);
+}
+
