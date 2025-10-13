@@ -2,10 +2,13 @@
   "name": "greenstack",
   "private": true,
   "scripts": {
-    "start": "concurrently \"npm run server\" \"npm run client\"",
-    "server": "nodemon server.js",
-    "client": "npm start --prefix client"
-  },
+  "start": "node server.js",
+  "build": "cd client && npm install && npm run build",
+  "dev": "concurrently \"npm run server\" \"npm run client\"",
+  "server": "nodemon server.js",
+  "client": "npm start --prefix client"
+},
+
   "dependencies": {
     "adm-zip": "^0.5.16",
     "animate.css": "^4.1.1",
